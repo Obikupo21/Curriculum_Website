@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Antonio Moreno — Full Stack Junior Dev</title>
+<meta name="description" content="Portfolio de Jose Antonio Moreno Teruel, Desarrollador Full Stack Junior — Java / Spring Boot / React Native.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<div class="ide">
+
+  <!-- Title bar -->
+  <div class="titlebar">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="dots"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+    <div class="titlebar-name">jose-moreno — portfolio</div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+  </div>
+
+  <!-- Open-file tab: shows which section is active, purely informational (not clickable) -->
+  <div class="tabbar" aria-hidden="true">
+    <div class="tab active">
+      <span class="tab-icon">●</span><span id="activeTabLabel">about.js</span>
+      <span class="tab-close">×</span>
+    </div>
+  </div>
+
+  <div class="ide-body">
+
+    <!-- Backdrop for mobile nav -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- Sidebar: this IS the navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">EXPLORER</div>
+      <ul class="filetree">
+        <li class="folder open">portfolio
+          <ul>
+            <li class="file active" data-goto="about">about.js</li>
+            <li class="file" data-goto="experience">experience.js</li>
+            <li class="file" data-goto="projects">projects.js</li>
+            <li class="file" data-goto="contact">contact.js</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main panel -->
+    <main class="panel">
+
+      <!-- ABOUT -->
+      <section class="view active" id="view-about">
+        <p class="code-line comment">// perfil profesional</p>
+        <p class="code-line"><span class="kw">const</span> <span class="var">dev</span> = {</p>
+        <div class="indent">
+          <p class="code-line"><span class="prop">name</span>: <span class="str">"Jose Antonio Moreno Teruel"</span>,</p>
+          <p class="code-line"><span class="prop">role</span>: <span class="str">"Full Stack Junior Developer"</span>,</p>
+          <p class="code-line"><span class="prop">location</span>: <span class="str">"Sueca, Valencia"</span>,</p>
+        </div>
+        <p class="code-line">};</p>
+
+        <div class="hero">
+          <h1>Jose Antonio Moreno<span class="cursor-blink">_</span></h1>
+          <p class="hero-role">Desarrollador Full Stack Junior <span class="sep">·</span> Java / Spring Boot <span class="sep">·</span> React Native</p>
+          <p class="hero-text">
+            Técnico en Desarrollo de Aplicaciones Multiplataforma con experiencia real en el ciclo completo de
+            desarrollo: backend con Spring Boot, frontend con React Native, y despliegue en servidores Linux (AWS).
+            Autónomo, resolutivo y con buena capacidad de aprendizaje de nuevas tecnologías.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects" data-goto="projects">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#contact" data-goto="contact">Contactar</a>
+          </div>
+        </div>
+
+        <div class="block">
+          <p class="code-line comment">// stack.json</p>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <h4>Lenguajes &amp; frameworks</h4>
+              <div class="tags">
+                <span>Java</span><span>Spring Boot</span><span>JavaScript</span><span>Node.js</span><span>React Native</span><span>HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h4>Bases de datos</h4>
+              <div class="tags">
+                <span>MongoDB</span><span>MySQL / MariaDB</span><span>Room (SQLite)</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h4>Infraestructura</h4>
+              <div class="tags">
+                <span>Linux</span><span>Docker</span><span>Nginx</span><span>AWS EC2</span><span>Git / GitHub</span><span>Android Studio</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h4>Idiomas</h4>
+              <div class="tags">
+                <span>Castellano / Valenciano — Nativo</span><span>Inglés — B1/B2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <p class="code-line comment">// formación</p>
+          <div class="edu-list">
+            <div class="edu-item">
+              <h4>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h4>
+              <span>Florida Universitària — 2024–2026</span>
+            </div>
+            <div class="edu-item">
+              <h4>Técnico en Sistemas Microinformáticos y Redes</h4>
+              <span>Florida Universitària — 2014–2016</span>
+            </div>
+            <div class="edu-item">
+              <h4>Especialización en COBOL — Coursera</h4>
+              <span>En curso</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="view" id="view-experience">
+        <p class="code-line comment">// experience.log</p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3>Desarrollador Full Stack (Prácticas)</h3>
+                <span class="tl-date">2026 · 5 meses</span>
+              </div>
+              <p class="tl-company">Neverlate</p>
+              <ul>
+                <li>Análisis de requisitos y diseño técnico de funcionalidades para una plataforma SaaS de gestión de citas.</li>
+                <li>Despliegue y mantenimiento de la aplicación SaaS en AWS EC2 mediante Docker y Nginx, participando en la configuración del entorno de producción.</li>
+                <li>Documentación técnica de procesos y seguimiento del avance del proyecto.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3>Operario</h3>
+                <span class="tl-date">2018 — Actualidad</span>
+              </div>
+              <p class="tl-company">Consum Cooperativa</p>
+              <ul>
+                <li>Gestión de stock y coordinación de equipo en un entorno de alta exigencia operativa; compatibilizado con los estudios de DAM.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="view" id="view-projects">
+        <p class="code-line comment">// projects.map(p => p.launch())</p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-window">
+              <div class="pw-bar"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+              <div class="pw-body">
+                <pre>$ git clone ListOChef
+$ npm run build
+✓ deployed to AWS EC2</pre>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>ListOChef</h3>
+              <p>Proyecto final de DAM: app móvil de gestión de recetas, inventario y gastos.</p>
+              <ul>
+                <li>Backend en Spring Boot con MongoDB Atlas y Cloudinary; frontend en React Native (Android/iOS).</li>
+                <li>Desplegado en servidor propio AWS EC2 con Nginx.</li>
+                <li>Desarrollo colaborativo mediante Git/GitHub siguiendo control de versiones.</li>
+              </ul>
+              <div class="tags">
+                <span>Spring Boot</span><span>React Native</span><span>MongoDB</span><span>AWS</span>
+              </div>
+              <a class="project-link" href="https://github.com/Obikupo21/ListOChef" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                github.com/Obikupo21/ListOChef
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-window">
+              <div class="pw-bar"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+              <div class="pw-body">
+                <pre>$ adb install basic-tracker.apk
+✓ Foreground Service running
+✓ tracking usage stats...</pre>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Basic Tracker</h3>
+              <p>App Android nativa de control de uso del móvil (bienestar digital).</p>
+              <ul>
+                <li>Desarrollada en Kotlin con Jetpack Compose; trackea encendidos de pantalla, desbloqueos y tiempo de uso de apps específicas (TikTok, Instagram).</li>
+                <li>Foreground Service persistente más Room para almacenamiento local; integración con UsageStatsManager para medir aperturas y tiempo de uso por app.</li>
+              </ul>
+              <div class="tags">
+                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span>
+              </div>
+              <a class="project-link" href="https://github.com/Obikupo21/Basic-Tracker" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                github.com/Obikupo21/Basic-Tracker
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="view" id="view-contact">
+        <p class="code-line comment">// contact.js — ¿hablamos?</p>
+        <p class="code-line"><span class="kw">function</span> <span class="fn">getInTouch</span>() {</p>
+        <div class="indent">
+          <p class="code-line"><span class="kw">return</span> <span class="str">"siempre abierto a nuevas oportunidades"</span>;</p>
+        </div>
+        <p class="code-line">}</p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:joseamteruel@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+            <div>
+              <h4>Email</h4>
+              <span>joseamteruel@gmail.com</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://github.com/Obikupo21" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            <div>
+              <h4>GitHub</h4>
+              <span>github.com/Obikupo21</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/jose-antonio-moreno-teruel-11b0a0272/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            <div>
+              <h4>LinkedIn</h4>
+              <span>in/jose-antonio-moreno-teruel</span>
+            </div>
+          </a>
+
+          <!--
+            Redes ocultas — cambia SHOW_HIDDEN_SOCIALS a true en script.js para mostrarlas.
+            TikTok:  https://www.tiktok.com/@obikupo
+            YouTube: https://www.youtube.com/channel/UCucxlFjEHsEmnV-yfiIUhxA
+          -->
+          <div id="hiddenSocials" hidden></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Status bar -->
+  <div class="statusbar">
+    <span>Sueca, Valencia</span>
+    <span class="statusbar-sep">·</span>
+    <span id="statusClock"></span>
+    <span class="statusbar-sep">·</span>
+    <span>UTF-8</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
