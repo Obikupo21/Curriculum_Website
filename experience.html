@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiencia — Jose Antonio Moreno</title>
+<meta name="description" content="Experiencia laboral de Jose Antonio Moreno Teruel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<div class="ide">
+
+  <div class="titlebar">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="dots"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+    <div class="titlebar-name">jose-moreno &mdash; portfolio</div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">&#9680;</button>
+  </div>
+
+  <div class="tabbar" aria-hidden="true">
+    <div class="tab active">
+      <span class="tab-icon">&#9679;</span><span>experience.js</span>
+      <span class="tab-close">&times;</span>
+    </div>
+  </div>
+
+  <div class="ide-body">
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">EXPLORER</div>
+      <ul class="filetree">
+        <li class="folder open">portfolio
+          <ul>
+            <li><a class="file" href="index.html">about.js</a></li>
+            <li><a class="file active" href="experience.html" aria-current="page">experience.js</a></li>
+            <li><a class="file" href="projects.html">projects.js</a></li>
+            <li><a class="file" href="contact.html">contact.js</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="panel">
+      <p class="code-line comment">// experience.log</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Desarrollador Full Stack (Prácticas)</h3>
+              <span class="tl-date">2026 &middot; 5 meses</span>
+            </div>
+            <p class="tl-company">Neverlate</p>
+            <ul>
+              <li>Análisis de requisitos y diseño técnico de funcionalidades para una plataforma SaaS de gestión de citas.</li>
+              <li>Despliegue y mantenimiento de la aplicación SaaS en AWS EC2 mediante Docker y Nginx, participando en la configuración del entorno de producción.</li>
+              <li>Documentación técnica de procesos y seguimiento del avance del proyecto.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Operario</h3>
+              <span class="tl-date">2018 &mdash; Actualidad</span>
+            </div>
+            <p class="tl-company">Consum Cooperativa</p>
+            <ul>
+              <li>Gestión de stock y coordinación de equipo en un entorno de alta exigencia operativa; compatibilizado con los estudios de DAM.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="statusbar">
+    <span>Sueca, Valencia</span>
+    <span class="statusbar-sep">&middot;</span>
+    <span id="statusClock"></span>
+    <span class="statusbar-sep">&middot;</span>
+    <span>UTF-8</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

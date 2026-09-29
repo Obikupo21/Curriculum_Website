@@ -1,8 +1,3 @@
-// ---------------------------------------------------------------------------
-// Config
-// ---------------------------------------------------------------------------
-
-// Cambia esto a true cuando quieras mostrar TikTok y YouTube en la pestaña de contacto.
 const SHOW_HIDDEN_SOCIALS = false;
 
 const HIDDEN_SOCIALS = [
@@ -20,14 +15,6 @@ const HIDDEN_SOCIALS = [
   }
 ];
 
-// ---------------------------------------------------------------------------
-// Tab / view switching
-// ---------------------------------------------------------------------------
-
-const files = document.querySelectorAll(".filetree .file");
-const views = document.querySelectorAll(".view");
-const gotoTargets = document.querySelectorAll("[data-goto]");
-const activeTabLabel = document.getElementById("activeTabLabel");
 const sidebar = document.getElementById("sidebar");
 const sidebarBackdrop = document.getElementById("sidebarBackdrop");
 const hamburger = document.getElementById("hamburger");
@@ -38,36 +25,12 @@ function closeMobileNav() {
   hamburger?.setAttribute("aria-expanded", "false");
 }
 
-function showView(name) {
-  views.forEach((v) => v.classList.toggle("active", v.id === "view-" + name));
-  files.forEach((f) => f.classList.toggle("active", f.dataset.goto === name));
-  if (activeTabLabel) activeTabLabel.textContent = name + ".js";
-  document.querySelector(".panel")?.scrollTo({ top: 0, behavior: "smooth" });
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  closeMobileNav();
-}
-
-gotoTargets.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    const name = el.dataset.goto;
-    if (name) {
-      e.preventDefault();
-      showView(name);
-    }
-  });
-});
-
-// Mobile nav toggle
 hamburger?.addEventListener("click", () => {
   const isOpen = sidebar?.classList.toggle("open");
   sidebarBackdrop?.classList.toggle("open", !!isOpen);
   hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 sidebarBackdrop?.addEventListener("click", closeMobileNav);
-
-// ---------------------------------------------------------------------------
-// Theme toggle (dark default, remembers choice for this browser only)
-// ---------------------------------------------------------------------------
 
 const themeToggle = document.getElementById("themeToggle");
 
@@ -96,10 +59,6 @@ themeToggle?.addEventListener("click", () => {
 
 applyStoredTheme();
 
-// ---------------------------------------------------------------------------
-// Status bar clock (Europe/Madrid)
-// ---------------------------------------------------------------------------
-
 const clockEl = document.getElementById("statusClock");
 
 function tickClock() {
@@ -114,10 +73,6 @@ function tickClock() {
 }
 tickClock();
 setInterval(tickClock, 30000);
-
-// ---------------------------------------------------------------------------
-// Hidden socials
-// ---------------------------------------------------------------------------
 
 if (SHOW_HIDDEN_SOCIALS) {
   const container = document.getElementById("hiddenSocials");

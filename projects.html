@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos — Jose Antonio Moreno</title>
+<meta name="description" content="Proyectos de desarrollo de Jose Antonio Moreno Teruel: ListOChef y Basic Tracker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<div class="ide">
+
+  <div class="titlebar">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="dots"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+    <div class="titlebar-name">jose-moreno &mdash; portfolio</div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">&#9680;</button>
+  </div>
+
+  <div class="tabbar" aria-hidden="true">
+    <div class="tab active">
+      <span class="tab-icon">&#9679;</span><span>projects.js</span>
+      <span class="tab-close">&times;</span>
+    </div>
+  </div>
+
+  <div class="ide-body">
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">EXPLORER</div>
+      <ul class="filetree">
+        <li class="folder open">portfolio
+          <ul>
+            <li><a class="file" href="index.html">about.js</a></li>
+            <li><a class="file" href="experience.html">experience.js</a></li>
+            <li><a class="file active" href="projects.html" aria-current="page">projects.js</a></li>
+            <li><a class="file" href="contact.html">contact.js</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="panel">
+      <p class="code-line comment">// projects.map(p =&gt; p.launch())</p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-window">
+            <div class="pw-bar"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+            <div class="pw-body">
+              <pre>$ git clone ListOChef
+$ npm run build
+&#10003; deployed to AWS EC2</pre>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>ListOChef</h3>
+            <p>Proyecto final de DAM: app móvil de gestión de recetas, inventario y gastos.</p>
+            <ul>
+              <li>Backend en Spring Boot con MongoDB Atlas y Cloudinary; frontend en React Native (Android/iOS).</li>
+              <li>Desplegado en servidor propio AWS EC2 con Nginx.</li>
+              <li>Desarrollo colaborativo mediante Git/GitHub siguiendo control de versiones.</li>
+            </ul>
+            <div class="tags">
+              <span>Spring Boot</span><span>React Native</span><span>MongoDB</span><span>AWS</span>
+            </div>
+            <a class="project-link" href="https://github.com/Obikupo21/ListOChef" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              github.com/Obikupo21/ListOChef
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-window">
+            <div class="pw-bar"><span class="d red"></span><span class="d yellow"></span><span class="d green"></span></div>
+            <div class="pw-body">
+              <pre>$ adb install basic-tracker.apk
+&#10003; Foreground Service running
+&#10003; tracking usage stats...</pre>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Basic Tracker</h3>
+            <p>App Android nativa de control de uso del móvil (bienestar digital).</p>
+            <ul>
+              <li>Desarrollada en Kotlin con Jetpack Compose; trackea encendidos de pantalla, desbloqueos y tiempo de uso de apps específicas (TikTok, Instagram).</li>
+              <li>Foreground Service persistente más Room para almacenamiento local; integración con UsageStatsManager para medir aperturas y tiempo de uso por app.</li>
+            </ul>
+            <div class="tags">
+              <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span>
+            </div>
+            <a class="project-link" href="https://github.com/Obikupo21/Basic-Tracker" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              github.com/Obikupo21/Basic-Tracker
+            </a>
+          </div>
+        </article>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="statusbar">
+    <span>Sueca, Valencia</span>
+    <span class="statusbar-sep">&middot;</span>
+    <span id="statusClock"></span>
+    <span class="statusbar-sep">&middot;</span>
+    <span>UTF-8</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -57,7 +57,6 @@ a{ color:inherit; }
   background:var(--panel);
 }
 
-/* Title bar */
 .titlebar{
   display:flex; align-items:center; gap:12px;
   padding:10px 16px;
@@ -79,7 +78,6 @@ a{ color:inherit; }
 }
 .theme-toggle:hover{ color:var(--accent); border-color:var(--accent); }
 
-/* Hamburger (mobile nav trigger, hidden on desktop) */
 .hamburger{
   display:flex; flex-direction:column; justify-content:center; gap:4px;
   width:26px; height:26px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0;
@@ -111,11 +109,13 @@ a{ color:inherit; }
 .filetree{ list-style:none; margin:0; padding:0; font-family:var(--font-mono); font-size:13px; }
 .filetree .folder{ padding:6px 16px; color:var(--ink-soft); }
 .filetree .folder > ul{ list-style:none; margin:4px 0 0; padding:0 0 0 14px; }
-.filetree .file{ padding:9px 8px; border-radius:4px; color:var(--ink-faint); cursor:pointer; }
+.filetree .file{
+  display:block; padding:9px 8px; border-radius:4px; color:var(--ink-faint);
+  text-decoration:none; cursor:pointer;
+}
 .filetree .file:hover{ color:var(--ink-soft); }
 .filetree .file.active{ color:var(--accent); background:rgba(88,166,255,.1); }
 
-/* Sidebar — the real navigation. Static column on desktop, slide-in drawer on mobile. */
 .sidebar{
   width:200px; flex-shrink:0; background:var(--panel-2);
   border-right:1px solid var(--line); padding:16px 0;
@@ -139,13 +139,10 @@ a{ color:inherit; }
 
 .panel{
   flex:1; min-width:0; padding:36px 40px 60px;
+  animation:fadeIn .35s ease;
 }
-
-.view{ display:none; }
-.view.active{ display:block; animation:fadeIn .35s ease; }
 @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
 
-/* Code-style lines */
 .code-line{
   font-family:var(--font-mono); font-size:13px; margin:0 0 4px; color:var(--ink-soft);
 }
@@ -179,7 +176,6 @@ a{ color:inherit; }
 
 .block{ margin-top:38px; }
 
-/* Skills grid */
 .skill-grid{
   display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:14px; margin-top:14px;
 }
@@ -196,7 +192,6 @@ a{ color:inherit; }
   background:var(--bg); border:1px solid var(--line); padding:4px 9px; border-radius:6px;
 }
 
-/* Education */
 .edu-list{ display:flex; flex-direction:column; gap:12px; margin-top:14px; }
 .edu-item{
   padding:14px 16px; background:var(--panel-2); border:1px solid var(--line); border-radius:10px;
@@ -205,7 +200,6 @@ a{ color:inherit; }
 .edu-item h4{ margin:0 0 4px; font-size:14px; }
 .edu-item span{ font-size:12.5px; color:var(--ink-faint); font-family:var(--font-mono); }
 
-/* Timeline (experience) */
 .timeline{ margin-top:24px; display:flex; flex-direction:column; gap:0; }
 .tl-item{ display:flex; gap:20px; position:relative; padding-bottom:36px; }
 .tl-item:last-child{ padding-bottom:0; }
@@ -226,7 +220,6 @@ a{ color:inherit; }
 .tl-content li{ font-size:13.5px; line-height:1.6; color:var(--ink-soft); margin-bottom:5px; }
 .tl-content li::marker{ color:var(--accent-2); }
 
-/* Projects */
 .project-grid{
   display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:22px; margin-top:20px;
 }
@@ -255,7 +248,6 @@ a{ color:inherit; }
 .project-link:hover{ text-decoration:underline; }
 .project-link svg{ width:15px; height:15px; fill:currentColor; }
 
-/* Contact */
 .contact-grid{
   display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:14px; margin-top:28px;
 }
@@ -269,14 +261,12 @@ a{ color:inherit; }
 .contact-card h4{ margin:0 0 3px; font-size:13.5px; }
 .contact-card span{ font-size:12px; color:var(--ink-faint); font-family:var(--font-mono); word-break:break-word; }
 
-/* Status bar */
 .statusbar{
   display:flex; gap:8px; align-items:center; padding:7px 16px;
   background:var(--accent); color:#0b0e14; font-size:11px; font-family:var(--font-mono); font-weight:600;
 }
 .statusbar-sep{ opacity:.5; }
 
-/* Responsive */
 @media(max-width:640px){
   .ide{ margin:0; border-radius:0; border:none; }
   .panel{ padding:26px 20px 50px; }
